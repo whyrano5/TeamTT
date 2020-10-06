@@ -7,7 +7,7 @@ Created on Tue Oct  6 22:16:27 2020
 from omokgame import *
 
 def main():
-    game = omokgame (15)
+    game =omokgame(15)
     game.game_start()
     return 0
 

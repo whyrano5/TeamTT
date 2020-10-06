@@ -10,7 +10,6 @@ from board import *
 from iot6789_student import *
 from stone import *
 from iot12345_student import *
-from iot6789_student import *
 
 class omokgame:
     def _init_(self, sz):
@@ -18,7 +17,7 @@ class omokgame:
         self._bd = board(self._size)
         #self._black = player(-1)
         self._black = iot6789_student(-1)
-        self.white = iot12345_student(1)
+        self._white = iot12345_student(1)
         self._turns = 0
         self._next = -1
         self._draw = 0
@@ -54,6 +53,7 @@ class omokgame:
                 #do while
                 while True:
                     print("white Player: time = %5d" % time)
+                    stn_w=self._white.next(self._bd.show(), self._size)
                     time += 1
                     if((time >= 4) or (self.validCheck(stn_w))):
                         break
